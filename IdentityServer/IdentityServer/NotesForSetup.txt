@@ -1,0 +1,7 @@
+﻿enable ssl on project property.
+set web url in project property same as ssl url.
+
+packages added:
+install-package microsoft.owin.host.systemweb
+install-package identityserver3
+
