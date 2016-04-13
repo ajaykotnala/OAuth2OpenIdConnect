@@ -1,15 +1,16 @@
-﻿(function(angular) {
+﻿(function (angular) {
     "use strict";
 
     var app = angular.module('app', [
-       'ui.router'
+       'ui.router',
+       'ui.router.default'
     ]);
 
     /* jshint ignore:start */
     //app.run(function ($state) { }); /* Required to force the first state to be displayed. */
     ///* jshint ignore:end */
 
-    app.config(function($stateProvider, $urlRouterProvider) {
+    app.config(function ($stateProvider, $urlRouterProvider) {
 
         $urlRouterProvider.otherwise("/welcome");
 
@@ -17,7 +18,13 @@
             .state('welcome', {
                 url: '/welcome',
                 templateUrl: 'App/templates/welcome.html',
-                controller: 'WelcomeController'
+                controller: 'WelcomeController',
+                resolve: {
+                    ApiEmployee: function (WelcomeService) {
+                        "ngInject";
+                        return WelcomeService.get();
+                    }
+                }
             });
     });
 })(angular);

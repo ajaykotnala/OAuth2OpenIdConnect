@@ -3,7 +3,17 @@
 
     angular.module('app').controller('WelcomeController', WelcomeController);
 
-    function WelcomeController($scope) {
-        $scope.message = "This message is coming from Controller";
+    function WelcomeController($scope, ApiEmployee) {
+        
+        $scope.message = "Employee Details";
+        $scope.employees = {
+            name: 'Ajay',
+            address: 'Whitefields-Hyderabad, India.'
+        };
+        
+
+        $scope.ApiEmployee = ApiEmployee;
+
+        
     }
 })(angular);
