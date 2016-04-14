@@ -22,7 +22,12 @@ namespace IdentityServer.Config
                     ClientSecrets = new List<Secret>()
                     {
                         new Secret(Application.Constants.Constants.ClientSecret.Sha256())
-                    }
+                    },
+                    AllowAccessToAllScopes = true,
+                    //AllowedScopes = new List<string>
+                    //{
+                    //    "galarymanagement"
+                    //}
                 }
             };
         }

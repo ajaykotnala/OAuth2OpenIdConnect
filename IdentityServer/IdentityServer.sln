@@ -28,6 +28,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularjsWeb", "..\Angularj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "..\WebApi\WebApi.csproj", "{08D12DDA-79EA-4EBE-8687-00D8FFBA2A7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Constants", "..\Application.Constants\Application.Constants.csproj", "{6DEEB823-4DC0-486B-B5CD-A3AA471B7CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCClient", "..\MVCClient\MVCClient.csproj", "{9713CBC4-DC8A-41EF-9386-CEA5317400AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +50,14 @@ Global
 		{08D12DDA-79EA-4EBE-8687-00D8FFBA2A7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08D12DDA-79EA-4EBE-8687-00D8FFBA2A7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08D12DDA-79EA-4EBE-8687-00D8FFBA2A7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DEEB823-4DC0-486B-B5CD-A3AA471B7CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEEB823-4DC0-486B-B5CD-A3AA471B7CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEEB823-4DC0-486B-B5CD-A3AA471B7CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEEB823-4DC0-486B-B5CD-A3AA471B7CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9713CBC4-DC8A-41EF-9386-CEA5317400AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9713CBC4-DC8A-41EF-9386-CEA5317400AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9713CBC4-DC8A-41EF-9386-CEA5317400AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9713CBC4-DC8A-41EF-9386-CEA5317400AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
