@@ -5,3 +5,6 @@ packages added:
 install-package microsoft.owin.host.systemweb
 install-package identityserver3
 
+
+for API
+https://dotnetcodr.com/2015/07/02/building-a-web-api-2-project-from-scratch-using-owinkatana-net-part-1/

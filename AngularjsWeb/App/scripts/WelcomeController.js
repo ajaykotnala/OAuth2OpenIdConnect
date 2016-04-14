@@ -11,9 +11,6 @@
             address: 'Whitefields-Hyderabad, India.'
         };
         
-
-        $scope.ApiEmployee = ApiEmployee;
-
-        
+        $scope.ApiEmployee = ApiEmployee; 
     }
 })(angular);
