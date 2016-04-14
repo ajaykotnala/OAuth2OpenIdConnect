@@ -2,8 +2,7 @@
     "use strict";
 
     var app = angular.module('app', [
-       'ui.router',
-       'ui.router.default'
+       'ui.router'
     ]);
 
     /* jshint ignore:start */

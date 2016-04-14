@@ -1,11 +1,22 @@
-﻿<div class="col-sm-9 col-md-10"><h2>{{message}}</h2></div>
+﻿<div class="col-sm-9 col-md-10"><h2>{{title}}</h2></div>
 
-<div class="col-sm-6 col-md-4 col-lg-3">
+<!--<div class="col-sm-6 col-md-4 col-lg-3">
     <a class="thumbnail user-man">
         <img class="img-responsive center-block" src="">
         <h4 class="text-center">{{employees.name}}</h4>
         <div class="caption">
             <p>{{ employees.address}}</p>
+        </div>
+    </a>
+</div>-->
+
+<div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="employee in ApiEmployee">
+    <a class="thumbnail service-type" href="">
+        <img class="img-responsive center-block" ng-src="{{ serviceType.icon }}">
+        <h4 class="text-center">{{ employee.Name }}</h4>
+        <div class="caption">
+            <p>{{ employee.Address }}</p>
+            <p>{{ employee.Telephone }}</p>
         </div>
     </a>
 </div>

@@ -1,12 +1,12 @@
-﻿(function(angular) {
+﻿(function (angular) {
     'use strict';
 
     angular
-        .module('app.services.aws')
+        .module('app')
         .factory('WelcomeService', WelcomeService);
 
     function WelcomeService($q, $http) {
-        var endpoint = "api/Employee/";
+        var endpoint = "http://localhost:53120/";
         var service = {
             get: get
         };
@@ -15,14 +15,22 @@
 
         function get() {
             var deferred = $q.defer();
-            $http.get(endpoint + "List").then
-            .success(function (response) {
-                deferred.resolve(response);
-            }).error(function (error) {
-                //notify service need to inject here.
-                deferred.reject(error);
-            });
+            $http.get(endpoint + "consumer")
+           .success(function (response) {
+               deferred.resolve(response);
+           }).error(function (error) {
+               //notify service need to inject here.
+               deferred.reject(error);
+           });
             return deferred.promise;
+            //$http.get(endpoint + "consumer").then
+            //.success(function (response) {
+            //    deferred.resolve(response);
+            //}).error(function (error) {
+            //    //notify service need to inject here.
+            //    deferred.reject(error);
+            //});
+            //return deferred.promise;
         }
     }
 

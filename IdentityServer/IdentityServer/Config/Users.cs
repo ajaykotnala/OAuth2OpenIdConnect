@@ -20,7 +20,7 @@ namespace IdentityServer.Config
                 },
                  new InMemoryUser
                 {
-                    Subject = "1",
+                    Subject = "2",
                     Username = "Deepika Padukone",
                     Password = "IWish!"
                 }
