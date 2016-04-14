@@ -9,6 +9,7 @@ namespace WebApi.Controllers
     public class ConsumerController : ApiController
     {
         [EnableCors("http://localhost:53120/","*","GET,POST,DELETE,PUT")]
+        [Authorize] //comment this line if you want to access api directly from web.
         public IHttpActionResult Get()
         {
             IList<Consumer> consumer = new List<Consumer>();

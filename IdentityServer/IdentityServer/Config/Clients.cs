@@ -11,7 +11,20 @@ namespace IdentityServer.Config
     {
         public static IEnumerable<Client> Get()
         {
-            return new List<Client>();
+            //return new List<Client>();
+            return new []
+            {
+                new Client
+                {
+                    ClientId = "tripgallarymanagement",
+                    ClientName = "Trip galary (client credentials)",
+                    Flow = Flows.ClientCredentials,
+                    ClientSecrets = new List<Secret>()
+                    {
+                        new Secret(Application.Constants.Constants.ClientSecret.Sha256())
+                    }
+                }
+            };
         }
     }
 }
