@@ -14,7 +14,7 @@ namespace IdentityServer.Config
             {
                 new Scope
                 {
-                    Name = "galarymanagement",
+                    Name = "gallerymanagement",
                     DisplayName = "Galary Management",
                     Description = "Token has to contiain the scope to enable access to api's",
                     Type = ScopeType.Resource

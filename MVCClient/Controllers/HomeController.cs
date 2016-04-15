@@ -14,15 +14,16 @@ namespace MVCClient.Controllers
         {
             var httpClient = HttpClientHelper.GetClient();
             var rspApi = await httpClient.GetAsync("consumer").ConfigureAwait(false);
-
+            var vm = new ConsumerViewModel();
+            vm.consumers = new List<Consumer>();
             if (rspApi.IsSuccessStatusCode)
             {
                 var lstTripsAsString = await rspApi.Content.ReadAsStringAsync().ConfigureAwait(false);
 
-                var vm = new ConsumerViewModel();
+                vm = new ConsumerViewModel();
                 vm.consumers = JsonConvert.DeserializeObject<IList<Consumer>>(lstTripsAsString).ToList();
 
-                return View();
+                return View(vm.consumers);
             }
             //else
             //{
@@ -30,7 +31,7 @@ namespace MVCClient.Controllers
             //             new HandleErrorInfo(ExceptionHelper.GetExceptionFromResponse(rspTrips),
             //            "Trips", "Index"));
             //}
-            return View();
+            return View(vm.consumers);
         }
     }
 }

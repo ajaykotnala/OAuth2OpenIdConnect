@@ -16,7 +16,7 @@ namespace IdentityServer.Config
             {
                 new Client
                 {
-                    ClientId = "tripgallarymanagement",
+                    ClientId = "tripgalleryclientcredentials",
                     ClientName = "Trip galary (client credentials)",
                     Flow = Flows.ClientCredentials,
                     ClientSecrets = new List<Secret>()

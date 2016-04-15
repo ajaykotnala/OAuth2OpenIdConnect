@@ -5,6 +5,7 @@ using IdentityServer.Config;
 using IdentityServer3.Core.Configuration;
 using Microsoft.Owin;
 using Owin;
+using Application.Constants;
 
 [assembly: OwinStartup(typeof(IdentityServer.Startup))]
 
@@ -27,8 +28,8 @@ namespace IdentityServer
                 {
                     Factory = idServerServiceFactory,
                     SiteName = "Standalone Identity Server",
-                    IssuerUri = "https://google.com",
-                    PublicOrigin = "https://localhost:44300/",
+                    IssuerUri = Constants.IssuerUri,
+                    PublicOrigin = Constants.STSOrigin,
                     SigningCertificate = LoadCertificate()
                 };
 
