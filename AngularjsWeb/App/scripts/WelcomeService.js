@@ -3,9 +3,29 @@
 
     angular
         .module('app')
-        .factory('WelcomeService', WelcomeService);
+        .factory('WelcomeService', ['$q', '$http', 'tokenContainer', WelcomeService]);
 
-    function WelcomeService($q, $http) {
+    //angular.module('app').config([
+    //    '$httpProvider', function($httpProvider) {
+    //        //Reset headers to avoid OPTIONS request (aka preflight)
+    //        $httpProvider.defaults.headers.common = {};
+    //        $httpProvider.defaults.headers.get = {};
+    //        $httpProvider.defaults.headers.post = {};
+    //        $httpProvider.defaults.headers.put = {};
+    //        $httpProvider.defaults.headers.patch = {};
+    //    }
+    //]);
+
+    function WelcomeService($q, $http, tokenContainer) {
+
+        var config = {
+            headers: {
+                'Authorization': 'Bearer' + tokenContainer.getToken().token,
+                'Accept': 'application/json;'
+            }
+        };
+
+
         var endpoint = "http://localhost:53120/";
         var service = {
             get: get
@@ -15,7 +35,7 @@
 
         function get() {
             var deferred = $q.defer();
-            $http.get(endpoint + "consumer")
+            $http.get(endpoint + "consumer", config)
            .success(function (response) {
                deferred.resolve(response);
            }).error(function (error) {

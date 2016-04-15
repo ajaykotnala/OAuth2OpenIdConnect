@@ -28,6 +28,21 @@ namespace IdentityServer.Config
                     //{
                     //    "galarymanagement"
                     //}
+                },
+                new Client
+                {
+                    ClientId = "tripgalleryimplicit",
+                    ClientName = "Trip galary (Implicit)",
+                    Flow = Flows.Implicit,
+                    AllowAccessToAllScopes = true,
+                    RedirectUris = new List<string>
+                    {
+                        Application.Constants.Constants.Angular + "callback.html"
+                    }
+                    //AllowedScopes = new List<string>
+                    //{
+                    //    "galarymanagement"
+                    //}
                 }
             };
         }

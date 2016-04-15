@@ -8,3 +8,6 @@ install-package identityserver3
 
 for API
 https://dotnetcodr.com/2015/07/02/building-a-web-api-2-project-from-scratch-using-owinkatana-net-part-1/
+
+Pluralsite
+https://app.pluralsight.com/player?course=oauth2-openid-connect-angular-aspdotnet&author=kevin-dockx&name=oauth2-openid-connect-angular-aspdotnet-m03&clip=4&mode=live
