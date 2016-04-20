@@ -13,7 +13,7 @@ namespace MVCClient.Controllers
         public async Task<ActionResult> Index()
         {
             var httpClient = HttpClientHelper.GetClient();
-            var rspApi = await httpClient.GetAsync("consumer").ConfigureAwait(false);
+            var rspApi = await httpClient.GetAsync("api/Get").ConfigureAwait(false);
             var vm = new ConsumerViewModel();
             vm.consumers = new List<Consumer>();
             if (rspApi.IsSuccessStatusCode)

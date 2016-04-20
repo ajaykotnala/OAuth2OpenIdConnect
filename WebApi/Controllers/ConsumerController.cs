@@ -16,19 +16,20 @@ namespace WebApi.Controllers
     public class ConsumerController : ApiController
     {
         [EnableCors(origins: "*", headers: "*", methods: "*")]
-        [Authorize] //comment this line if you want to access api directly from web.
-        [AcceptVerbs("HEAD,GET")]
+        [Route("api/Get")]
+        //  [Authorize] //comment this line if you want to access api directly from web.
+        // [AcceptVerbs("HEAD,GET")]
         public IHttpActionResult Get()
         {
-            HttpResponseMessage response;
-            if (HttpContext.Current.Request.HttpMethod == "HEAD")
-            {
-                response = new HttpResponseMessage(HttpStatusCode.OK);
-                var memoryStream = new MemoryStream();
-                response.Content= new StreamContent(memoryStream);
-                response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
-                return Ok(response);
-            }
+            //HttpResponseMessage response;
+            //if (HttpContext.Current.Request.HttpMethod == "HEAD")
+            //{
+            //    response = new HttpResponseMessage(HttpStatusCode.OK);
+            //    var memoryStream = new MemoryStream();
+            //    response.Content= new StreamContent(memoryStream);
+            //    response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
+            //    return Ok(response);
+            //}
 
             IList<Consumer> consumer = new List<Consumer>();
             consumer.Add(new Consumer() { Name = "Ajay Kotnala", Address = "INDIA", Telephone = "123345456" });
@@ -37,7 +38,7 @@ namespace WebApi.Controllers
             return Ok(consumer);
         }
 
-        // [EnableCors("http://localhost:62627", "*","GET,POST,DELETE,PUT")]
+        //[EnableCors("http://localhost:62627", "*","GET,POST,DELETE,PUT")]
         //[EnableCors("*", "*", "GET, POST, PATCH, OPTIONS")]
     }
 }
